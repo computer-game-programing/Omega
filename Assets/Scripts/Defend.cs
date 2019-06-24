@@ -11,6 +11,7 @@ public class Defend : MonoBehaviour
     public int possibility; //防御可能性 百分数
     public float percent; // 防御伤害的百分比
     public Character.AttackType type;//防御的伤害种类
+    public Skill.SkillType skill_type; //技能种类
     private float CurrentHP;
     private readonly object locker = new object();
     private Character character;
@@ -27,8 +28,6 @@ public class Defend : MonoBehaviour
         character = GetComponent<Character>();
         CurrentHP = MaxHP;
         defend_setting = new List<DefendSkiilSetting>();
-
-
     }
 
     // Update is called once per frame
@@ -110,6 +109,11 @@ public class Defend : MonoBehaviour
         }
         return ChangeBlood((-1) * damage_value);
     }
+
+    public void KillObject()
+    {
+        ChangeBlood(-100);
+    }
     public void ShowHPSlider()
     {
         blood_slider.value = CurrentHP / MaxHP;
@@ -157,19 +161,30 @@ public class Defend : MonoBehaviour
             CurrentHP += value;
 
         }
-        ShowHPSlider();
+
+        if (skill_type == Skill.SkillType.Attack2 || skill_type == Skill.SkillType.Cure2)
+        {
+            gameObject.GetComponent<Skill>().WhetherTrigger(CurrentHP - value, CurrentHP);
+        }
 
         if (CurrentHP > 100)
         {
             CurrentHP = 100;
         }
+
+        ShowHPSlider();
         if (CurrentHP <= 0)
         {
+            if (skill_type == Skill.SkillType.PerishTogether)
+            {
+                gameObject.GetComponent<Skill>().PerishTogetherSkill();
+            }
             CurrentHP = 0;
             Destroy(blood_slider.gameObject);
             Destroy(this.gameObject);
             return true;
         }
+
         return false;
     }
 

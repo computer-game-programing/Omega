@@ -6,54 +6,64 @@ public class Skill : MonoBehaviour
 {
     public enum SkillType //技能种类
     {
-        Attack,
-        Defend,
-        Cure,
-        SkillAssist,
-        AttackAssist
+        Attack = 1,
+        Defend = 2,
+        Cure = 3,
+        SkillAssist = 4,
+        AttackAssist = 5,
+        PerishTogether = 6,
+        Attack2 = 7,//血量特定变化时会产生的攻击
+        Cure2 = 8 //血量特定变化时会产生的治疗
 
     };
 
     [System.Serializable]
     public struct DefendSkillParameter
     {
-        public int distance;//涉及距离
         public int time;//持续时间
         public float percent;//减少伤害的百分比
     }
     [System.Serializable]
     public struct AttackSkillParameter
     {
-        public int distance;//涉及距离
+
         public int value; //攻击力的值
         public Character.AttackType type; //攻击的类型
+        public int blood_value; //引发攻击的血量临界值(当为Attack2技能类型时，有用)
     }
 
     [System.Serializable]
     public struct CureSkillParameter
     {
-        public int distance;//涉及距离
         public uint value; //治疗力度
     }
 
     [System.Serializable]
     public struct SkillAssistParameter //增加技能槽的辅助技能
     {
-        public int distance;//涉及距离
         public int value; //技能槽增加值
     }
     [System.Serializable]
     public struct AttackAssistParameter //提升攻击力的辅助技能
     {
-        public int distance;//涉及距离
         public float value; //攻击力增加比例 0-1
+    }
+    [System.Serializable]
+    public struct PerishTogetherSkillParameter //同归于尽技能
+    {
+        public int percent; //同归于尽的可能性(0-100)
     }
 
     public SkillType type;
     public int accumulation;//技能积累速度
+    public int skill_distance;//技能波及距离
     public DefendSkillParameter defend;// 防御类技能的参数
     public AttackSkillParameter attack;//攻击类技能参数
     public CureSkillParameter cure;//治疗类技能参数
+    public SkillAssistParameter skill_assist;//技能槽增加
+    public AttackAssistParameter attack_assist;//攻击力增加
+    public PerishTogetherSkillParameter perish_together;//同归于尽技能
+    private readonly object locker = new object();//读写锁
 
 
     private float attackCounter; //计时器变量
@@ -64,8 +74,10 @@ public class Skill : MonoBehaviour
     void Start()
     {
         attackCounter = 0;
-        character = GetComponent<Character>();
         skill_value = 0;
+        character = GetComponent<Character>();
+        GetComponent<Defend>().skill_type = type;
+
     }
 
     // Update is called once per frame
@@ -76,7 +88,7 @@ public class Skill : MonoBehaviour
             attackCounter += Time.deltaTime;
             if (attackCounter >= 1)
             {
-                skill_value += accumulation;
+                AddSkill(accumulation);
                 attackCounter = 0;
             }
             if (skill_value >= 100)
@@ -93,18 +105,33 @@ public class Skill : MonoBehaviour
                     case SkillType.Cure:
                         CureSkill();
                         break;
+                    case SkillType.AttackAssist:
+                        AttackAssist();
+                        break;
+                    case SkillType.SkillAssist:
+                        SkillAssist();
+                        break;
+                    default:
+                        break;
                 }
             }
         }
     }
+    public void AddSkill(int value)
+    {
+        lock (locker)
+        {
+            skill_value += value;
+        }
 
+    }
     private void DefendSkill()
     {
         GameObject[] enemys = GameObject.FindGameObjectsWithTag(gameObject.tag);
         foreach (GameObject enemy in enemys)
         {
             double distance = Character.GetDistance(character.GetNode(), enemy.GetComponent<Character>().GetNode());
-            if (distance <= distance + 0.0001)
+            if (distance <= skill_distance + 0.0001)
             {
                 enemy.GetComponent<Defend>().ExtraDefend(defend.percent, defend.time);
 
@@ -112,6 +139,25 @@ public class Skill : MonoBehaviour
         }
     }
 
+    public void WhetherTrigger(float blood_value0, float blood_value1) //判断是否为引起攻击/治疗的临界血量
+    {
+        if (blood_value0 > attack.blood_value && blood_value1 <= attack.blood_value)
+        {
+            switch (type)
+            {
+                case SkillType.Attack2:
+                    AttackSkill();
+                    break;
+                case SkillType.Cure2:
+                    CureSkill();
+                    break;
+                default:
+                    break;
+            }
+
+        }
+        return;
+    }
     private void AttackSkill()
     {
         Debug.Log("AttackSkill");
@@ -119,7 +165,7 @@ public class Skill : MonoBehaviour
         foreach (GameObject enemy in enemys)
         {
             double distance = Character.GetDistance(character.GetNode(), enemy.GetComponent<Character>().GetNode());
-            if (distance <= attack.distance + 0.0001)
+            if (distance <= skill_distance + 0.0001)
             {
                 enemy.GetComponent<Defend>().TakeDamage(attack.value, attack.type, character.GetNode());
 
@@ -129,15 +175,60 @@ public class Skill : MonoBehaviour
     private void CureSkill()
     {
         Debug.Log("CureSkill");
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag(gameObject.tag);
-        foreach (GameObject enemy in enemys)
+        GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        foreach (GameObject friend in friends)
         {
-            double distance = Character.GetDistance(character.GetNode(), enemy.GetComponent<Character>().GetNode());
-            if (distance <= cure.distance + 0.0001)
+            double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
+            if (distance <= skill_distance + 0.0001)
             {
-                enemy.GetComponent<Defend>().AddBlood(cure.value);
+                friend.GetComponent<Defend>().AddBlood(cure.value);
 
             }
         }
+    }
+    private void SkillAssist()
+    {
+        GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        foreach (GameObject friend in friends)
+        {
+            double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
+            if (distance <= skill_distance + 0.0001)
+            {
+                friend.GetComponent<Skill>().AddSkill(skill_assist.value);
+            }
+        }
+    }
+
+    private void AttackAssist()
+    {
+        GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        foreach (GameObject friend in friends)
+        {
+            double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
+            if (distance <= skill_distance + 0.0001)
+            {
+                friend.GetComponent<Character>().ImprovAttackValue(attack_assist.value);
+            }
+        }
+    }
+
+    public void PerishTogetherSkill()
+    {
+        Debug.Log("PerishTogetherSkill");
+        GameObject[] enemys = GameObject.FindGameObjectsWithTag(character.TargetTag);
+        foreach (GameObject enemy in enemys)
+        {
+            double distance = Character.GetDistance(character.GetNode(), enemy.GetComponent<Character>().GetNode());
+            if (distance <= skill_distance + 0.0001)
+            {
+                int rand = Random.Range(0, 100);
+                if (rand <= perish_together.percent)
+                {
+                    enemy.GetComponent<Defend>().KillObject();
+                }
+
+            }
+        }
+
     }
 }

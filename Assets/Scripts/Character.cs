@@ -19,7 +19,7 @@ public class Character : MonoBehaviour
     public struct ATK
     {
         public int maximum_attack_distance;
-        public int attack_damage;
+        public float attack_damage;
         public float attack_time;
         public AttackType attack_type;
     };
@@ -27,6 +27,7 @@ public class Character : MonoBehaviour
     //[SyncVar]
 
     public string TargetTag;
+    public bool if_skill = false;
     // private int node_index;
     private Node node;
     private GameObject targetobj;
@@ -249,6 +250,14 @@ public class Character : MonoBehaviour
         if (Vector3.Distance(transform.position, targetobj.transform.position) > Vector3.Distance(transform.position, attack_obj.transform.position))
         {
             targetobj = attack_obj;
+        }
+    }
+
+    public void ImprovAttackValue(float percent)
+    {
+        for (int i = 0; i < attack_setting.Length; i++)
+        {
+            attack_setting[i].attack_damage *= (1 + percent);
         }
     }
 }
