@@ -16,7 +16,7 @@ public class FindPath : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // FindingPath(player.position, EndPoint.position);
+        // FindingPath(player.position, EndPoint.position);
     }
 
     public List<Node> FindingPath(Vector3 StarPos, Vector3 EndPos)
@@ -47,9 +47,9 @@ public class FindPath : MonoBehaviour
                 return GeneratePath(startNode, endNode);
             }
             //判断周围最优节点
-            foreach (var item in grid.GetNeibourhood(currentNode,endNode))
+            foreach (var item in grid.GetNeibourhood(currentNode, endNode))
             {
-                    
+
                 if (!item._canWalk || closeSet.Contains(item))
                     continue;
                 int newCost = currentNode.gCost + GetDistanceNodes(currentNode, item);
@@ -98,8 +98,5 @@ public class FindPath : MonoBehaviour
         {
             return 14 * cntX + 10 * (cntY - cntX);
         }
-
-        //曼哈顿算法
-        //return Mathf.Abs(a._gridX - b._gridX) * 10 + Mathf.Abs(a._gridY - b._gridY) * 10;
     }
 }

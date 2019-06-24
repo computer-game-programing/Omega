@@ -164,35 +164,7 @@ public class Grid : MonoBehaviour
 
     }
 
-    /* void OnDrawGizmos()
-     {
-         //画出网格边缘
-         Gizmos.DrawWireCube(transform.position + GetComponent<BoxCollider>().center, new Vector3(gridSize.x, 1, gridSize.z));
-         //画不可走网格
-         if (grid == null)
-             return;
-        // Node playerNode = GetFromPos(player.position);
-         foreach (var item in grid)
-         {
-             Gizmos.color = item._canWalk ? Color.white : Color.red;
-             Gizmos.DrawCube(item._worldPos, Vector3.one * (nodeDiameter - 0.1f));
-         }
-         //画路径
-         if (path != null)
-         {
-             foreach (var item in path)
-             {
-                 Gizmos.color = Color.black;
-                 Gizmos.DrawCube(item._worldPos, Vector3.one * (nodeDiameter - 0.1f));
-             }
-         }
-         //画玩家
-        // if (playerNode != null && playerNode._canWalk)
-        // {
-        //     Gizmos.color = Color.cyan;
-        //     Gizmos.DrawCube(playerNode._worldPos, Vector3.one * (nodeDiameter - 0.1f));
-        // }
-     }*/
+
 
     public List<Node> GetNeibourhood(Node node, Node endnode)
     {
