@@ -33,7 +33,7 @@ public class Skill : MonoBehaviour
     public struct CureSkillParameter
     {
         public int distance;//涉及距离
-        public int value; //治疗力度
+        public uint value; //治疗力度
     }
 
     [System.Serializable]
@@ -54,6 +54,7 @@ public class Skill : MonoBehaviour
     public DefendSkillParameter defend;// 防御类技能的参数
     public AttackSkillParameter attack;//攻击类技能参数
     public CureSkillParameter cure;//治疗类技能参数
+
 
     private float attackCounter; //计时器变量
     private Character character;

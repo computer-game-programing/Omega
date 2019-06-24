@@ -24,15 +24,6 @@ public class Character : MonoBehaviour
         public AttackType attack_type;
     };
 
-    public struct Cure
-    {
-        public int maximum_cure_distance;
-        public int cure_value;
-        public float cure_time;
-    }
-
-    public Cure[] cure_setting;
-
     //[SyncVar]
 
     public string TargetTag;
@@ -97,7 +88,7 @@ public class Character : MonoBehaviour
             MovetoTarget();
             if (targetobj != null && attack_num < attack_setting.Length)
             {
-                double distance = GetDistance(node, targetobj.GetComponent<Character>().GetNode());
+                double distance = GetDistance2Target();
                 if (distance <= attack_setting[attack_num].maximum_attack_distance + 0.1)
                 {
                     if (attack_num == 0)
@@ -130,31 +121,13 @@ public class Character : MonoBehaviour
         }
     }
 
-    /* public bool TakeDamage( ATK damage)
-     {
-         lock (locker)
-         {
-             CurrentHP -= damage.attack_damage;
-         }
-         ShowHPSlider();
-         if (CurrentHP <= 0)
-         {
-             CurrentHP = 0;
-             Destroy(blood_slider.gameObject);
-             Destroy(this.gameObject);
-             return true;
-
-         }
-         return false;
-     }
-     public void ShowHPSlider()
-     {
-         blood_slider.value = CurrentHP / (float)MaxHP;
-     }*/
-
     public Node GetNode()
     {
         return node;
+    }
+    public GameObject GetTargetObj()
+    {
+        return targetobj;
     }
     private static int GetXByIndex(int node_index)
     {
@@ -169,6 +142,13 @@ public class Character : MonoBehaviour
     {
         int dx = node1._gridX - node2._gridX;
         int dz = node1._gridY - node2._gridY;
+        return System.Math.Sqrt(dx * dx + dz * dz);
+    }
+    public double GetDistance2Target()
+    {
+        Node t = targetobj.GetComponent<Character>().GetNode();
+        int dx = node._gridX - t._gridX;
+        int dz = node._gridY - t._gridY;
         return System.Math.Sqrt(dx * dx + dz * dz);
     }
 

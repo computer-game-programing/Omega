@@ -7261,6 +7261,7 @@ GameObject:
   m_Component:
   - component: {fileID: 243909991}
   - component: {fileID: 243909994}
+  - component: {fileID: 243909995}
   - component: {fileID: 243909993}
   - component: {fileID: 243909992}
   m_Layer: 0
@@ -7313,7 +7314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  accumulation: 5
+  accumulation: 50
   defend:
     distance: 0
     time: 0
@@ -7348,6 +7349,24 @@ MonoBehaviour:
     attack_time: 6
     attack_type: 0
   attack_type: 0
+--- !u!114 &243909995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243909990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132d5ddcf14b0bb4eaefcc276780d11f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cure_setting:
+  - max_distance: 4
+    value: 1
+    time: 3
+  - max_distance: 2
+    value: 2
+    time: 3
 --- !u!1001 &251671684
 Prefab:
   m_ObjectHideFlags: 0
@@ -8554,7 +8573,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -12610,7 +12629,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -32872,7 +32891,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1079954551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32884,10 +32903,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3225f07c78991e4684de075aca4b0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackCounter: 0
+  character: {fileID: 0}
   distance: 7
   time: 4
   percent: 0.6
   accumulation: 15
+  skill_value: 0
 --- !u!4 &1079954552
 Transform:
   m_ObjectHideFlags: 0
@@ -41788,8 +41810,8 @@ RectTransform:
   m_Father: {fileID: 403745174}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -45795,8 +45817,8 @@ RectTransform:
   m_Father: {fileID: 1112817989}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -58487,7 +58509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1982021504
 MonoBehaviour:
   m_ObjectHideFlags: 0
