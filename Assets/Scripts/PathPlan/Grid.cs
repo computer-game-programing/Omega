@@ -68,7 +68,7 @@ public class Grid : MonoBehaviour
     //读写锁
     private ReaderWriterLockSlim read_write_lock = new ReaderWriterLockSlim();
     // 保存障碍物信息
-    private bool[ ,] block_node;
+    private bool[,] block_node;
     /// <summary>
     /// 保存路径列表
     /// </summary>
@@ -77,7 +77,7 @@ public class Grid : MonoBehaviour
     // 棋盘位置
     private Vector3 origin_pos;
 
-   
+
 
     void Awake()
     {
@@ -92,21 +92,21 @@ public class Grid : MonoBehaviour
         origin_pos.y = transform.position.y + GetComponent<BoxCollider>().center.y;
         for (int i = 0; i < gridCntX; i++)
         {
-            for(int j = 0; j < gridCntY; j++)
+            for (int j = 0; j < gridCntY; j++)
             {
-                Write(i,j, false);
+                Write(i, j, false);
             }
-           
+
         }
         grid = new Node[gridCntX, gridCntY];
         CreateGrid();
     }
-    public bool Read(int x,int y)
+    public bool Read(int x, int y)
     {
         read_write_lock.EnterReadLock();
         try
         {
-            return block_node[x,y];
+            return block_node[x, y];
         }
         finally
         {
@@ -115,12 +115,12 @@ public class Grid : MonoBehaviour
 
     }
 
-    public void Write(int x,int y, bool is_blocked)
+    public void Write(int x, int y, bool is_blocked)
     {
         read_write_lock.EnterWriteLock();
         try
         {
-            block_node[x,y] = is_blocked;
+            block_node[x, y] = is_blocked;
         }
         finally
         {
@@ -164,44 +164,44 @@ public class Grid : MonoBehaviour
 
     }
 
-   /* void OnDrawGizmos()
-    {
-        //画出网格边缘
-        Gizmos.DrawWireCube(transform.position + GetComponent<BoxCollider>().center, new Vector3(gridSize.x, 1, gridSize.z));
-        //画不可走网格
-        if (grid == null)
-            return;
-       // Node playerNode = GetFromPos(player.position);
-        foreach (var item in grid)
-        {
-            Gizmos.color = item._canWalk ? Color.white : Color.red;
-            Gizmos.DrawCube(item._worldPos, Vector3.one * (nodeDiameter - 0.1f));
-        }
-        //画路径
-        if (path != null)
-        {
-            foreach (var item in path)
-            {
-                Gizmos.color = Color.black;
-                Gizmos.DrawCube(item._worldPos, Vector3.one * (nodeDiameter - 0.1f));
-            }
-        }
-        //画玩家
-       // if (playerNode != null && playerNode._canWalk)
-       // {
-       //     Gizmos.color = Color.cyan;
-       //     Gizmos.DrawCube(playerNode._worldPos, Vector3.one * (nodeDiameter - 0.1f));
-       // }
-    }*/
+    /* void OnDrawGizmos()
+     {
+         //画出网格边缘
+         Gizmos.DrawWireCube(transform.position + GetComponent<BoxCollider>().center, new Vector3(gridSize.x, 1, gridSize.z));
+         //画不可走网格
+         if (grid == null)
+             return;
+        // Node playerNode = GetFromPos(player.position);
+         foreach (var item in grid)
+         {
+             Gizmos.color = item._canWalk ? Color.white : Color.red;
+             Gizmos.DrawCube(item._worldPos, Vector3.one * (nodeDiameter - 0.1f));
+         }
+         //画路径
+         if (path != null)
+         {
+             foreach (var item in path)
+             {
+                 Gizmos.color = Color.black;
+                 Gizmos.DrawCube(item._worldPos, Vector3.one * (nodeDiameter - 0.1f));
+             }
+         }
+         //画玩家
+        // if (playerNode != null && playerNode._canWalk)
+        // {
+        //     Gizmos.color = Color.cyan;
+        //     Gizmos.DrawCube(playerNode._worldPos, Vector3.one * (nodeDiameter - 0.1f));
+        // }
+     }*/
 
     public List<Node> GetNeibourhood(Node node, Node endnode)
     {
         List<Node> neibourhood = new List<Node>();
         //相邻上下左右格子
-        
+
         int tempX = node._gridX + 1;
         int tempY = node._gridY;
-        if (tempX < gridCntX && tempX > 0 && tempY > 0 && tempY < gridCntY &&( ! block_node[tempX,tempY] || (tempX == endnode._gridX && tempY == endnode._gridY)) )
+        if (tempX < gridCntX && tempX > 0 && tempY > 0 && tempY < gridCntY && (!block_node[tempX, tempY] || (tempX == endnode._gridX && tempY == endnode._gridY)))
         {
             neibourhood.Add(grid[tempX, tempY]);
         }
@@ -214,14 +214,14 @@ public class Grid : MonoBehaviour
         }
 
         tempX = node._gridX;
-        tempY = node._gridY+1;
+        tempY = node._gridY + 1;
         if (tempX < gridCntX && tempX > 0 && tempY > 0 && tempY < gridCntY && (!block_node[tempX, tempY] || (tempX == endnode._gridX && tempY == endnode._gridY)))
         {
             neibourhood.Add(grid[tempX, tempY]);
         }
 
         tempX = node._gridX;
-        tempY = node._gridY-1;
+        tempY = node._gridY - 1;
         if (tempX < gridCntX && tempX > 0 && tempY > 0 && tempY < gridCntY && (!block_node[tempX, tempY] || (tempX == endnode._gridX && tempY == endnode._gridY)))
         {
             neibourhood.Add(grid[tempX, tempY]);
