@@ -34,6 +34,10 @@ public class Defend : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Global.is_start)
+        {
+            return;
+        }
 
         if (defend_setting.Count == 0)
         {
@@ -58,7 +62,7 @@ public class Defend : MonoBehaviour
 
     }
 
-    public void TakeDamage(Character.ATK attack, Node node)
+    public bool TakeDamage(Character.ATK attack, Node node)
     {
         float damage_value = attack.attack_damage;
 
@@ -71,14 +75,10 @@ public class Defend : MonoBehaviour
             }
 
         }
-        lock (locker)
-        {
-            CurrentHP -= damage_value;
-        }
-        ChangeBlood((-1) * damage_value);
+        return ChangeBlood((-1) * damage_value);
     }
 
-    public void TakeDamage(Character.ATK attack, GameObject enemy)
+    public bool TakeDamage(Character.ATK attack, GameObject enemy)
     {
 
         float damage_value = attack.attack_damage;
@@ -92,9 +92,9 @@ public class Defend : MonoBehaviour
             }
 
         }
-        ChangeBlood((-1) * damage_value);
+        return ChangeBlood((-1) * damage_value);
     }
-    public void TakeDamage(int value, Character.AttackType attack_type, Node node)
+    public bool TakeDamage(int value, Character.AttackType attack_type, Node node)
     {
 
         float damage_value = value;
@@ -108,7 +108,7 @@ public class Defend : MonoBehaviour
             }
 
         }
-        ChangeBlood((-1) * damage_value);
+        return ChangeBlood((-1) * damage_value);
     }
     public void ShowHPSlider()
     {
@@ -145,8 +145,13 @@ public class Defend : MonoBehaviour
         ChangeBlood((int)value);
     }
 
-    private void ChangeBlood(float value)
-    { //改变血量并控制血条显示，value可正可负
+    /*血量改变控制函数
+    value可正可负
+    返回值true 表示血量为零，对象被摧毁
+    否则 返回false
+    */
+    private bool ChangeBlood(float value)
+    {
         lock (locker)
         {
             CurrentHP += value;
@@ -163,7 +168,9 @@ public class Defend : MonoBehaviour
             CurrentHP = 0;
             Destroy(blood_slider.gameObject);
             Destroy(this.gameObject);
+            return true;
         }
+        return false;
     }
 
 
