@@ -11,11 +11,10 @@ public class Cure : MonoBehaviour
     {
         public int max_distance;
         public uint value;
-        public int time;
     }
     public CureSetting[] cure_setting;
     private float time_counter; //计时器变量
-    private int sid;
+    public int time;//治疗的速度 
 
     private Character character;
 
@@ -23,9 +22,7 @@ public class Cure : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
-        sid = cure_setting.Length - 1;
-        time_counter = cure_setting[sid].time;
+        time_counter = time;
         character = GetComponent<Character>();
     }
 
@@ -37,20 +34,24 @@ public class Cure : MonoBehaviour
         {
             return;
         }
-        double distance = character.GetDistance2Target();
-        if (distance <= cure_setting[sid].max_distance + 0.1)
+
+        time_counter += Time.deltaTime;
+        if (time_counter >= time)
         {
-            time_counter += Time.deltaTime;
-            if (time_counter >= cure_setting[sid].time)
+            time_counter = 0;
+            GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+            foreach (GameObject friend in friends)
             {
-                time_counter = 0;
-                character.GetTargetObj().GetComponent<Defend>().AddBlood(cure_setting[sid].value);
-            }
-            if (sid > 0)
-            {
-                if (distance <= cure_setting[sid - 1].max_distance + 0.1)
+                double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
+                int id = 0;
+                while (id < cure_setting.Length)
                 {
-                    sid -= 1;
+                    if (distance < cure_setting[id].max_distance + 0.1)
+                    {
+                        friend.GetComponent<Defend>().AddBlood(cure_setting[id].value);
+                        break;
+                    }
+                    id++;
                 }
             }
 

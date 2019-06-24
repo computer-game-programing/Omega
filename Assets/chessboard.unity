@@ -7314,7 +7314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  accumulation: 50
+  accumulation: 3
   defend:
     distance: 0
     time: 0
@@ -7363,10 +7363,9 @@ MonoBehaviour:
   cure_setting:
   - max_distance: 4
     value: 1
-    time: 3
   - max_distance: 2
     value: 2
-    time: 3
+  time: 3
 --- !u!1001 &251671684
 Prefab:
   m_ObjectHideFlags: 0
