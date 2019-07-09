@@ -6,6 +6,7 @@ public class DestroyEffect : MonoBehaviour
 {
 
     private float time_count;
+    public float duration = 1.6f;
     // Use this for initialization
     void Start()
     {
@@ -16,7 +17,7 @@ public class DestroyEffect : MonoBehaviour
     void Update()
     {
         time_count += Time.deltaTime;
-        if (time_count > 1.6)
+        if (time_count > duration)
         {
             Destroy(this.gameObject);
         }

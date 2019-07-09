@@ -45,6 +45,10 @@ public class Cure : MonoBehaviour
         {
             time_counter = 0;
             GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+            if (friends.Length > 0)
+            {
+                Instantiate(Resources.Load("SelectedEffect/NormalCure"), this.gameObject.transform.position, Quaternion.identity);
+            }
             foreach (GameObject friend in friends)
             {
                 double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
@@ -62,6 +66,10 @@ public class Cure : MonoBehaviour
 
         }
 
+    }
+    public int GetCureDistance()
+    {
+        return cure_setting[cure_setting.Length - 1].max_distance;
     }
 
 }

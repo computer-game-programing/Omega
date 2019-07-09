@@ -37,6 +37,7 @@ public class Character : MonoBehaviour
     // private int node_index;
     private Node node;
     private GameObject targetobj;
+    private GameObject target_cure_obj;
     //    private PathMap path_map;
     //  private PathPlanner path_planner;
     private FindPath find_path;
@@ -48,12 +49,12 @@ public class Character : MonoBehaviour
     public ATK[] attack_setting;
     public AttackType attack_type;
     private int attack_num = 0;
-    private bool mouse_down = false;
+    private bool is_cure = false;
 
     // Use this for initialization
     void Awake()
     {
-
+        if (gameObject.GetComponent<Cure>() != null) is_cure = true;
     }
     void Start()
     {
@@ -80,6 +81,7 @@ public class Character : MonoBehaviour
         grid.Write(node._gridX, node._gridY, true);
         //transform.Find("Canvas").transform.Find("Slider").
         FindTarget();
+        FindCureTarget();
         //int target_id = targetobj.GetComponent<Character>().GetNodeIndex();
 
         //int next_node = path_planner.FindNextNodeByAstar(GetXByIndex(node_index), GetZByIndex(node_index), GetXByIndex(target_id), GetZByIndex(target_id));
@@ -92,6 +94,10 @@ public class Character : MonoBehaviour
         //if(targetobj == null) robot.GetComponent<Animation>().Stop();
         if (Global.is_start)
         {
+            if (target_cure_obj == null || target_cure_obj.GetComponent<Defend>().GetBloodValue() > 50)
+            {
+                FindCureTarget();
+            }
             MovetoTarget();
             if (targetobj != null && attack_num < attack_setting.Length)
             {
@@ -187,6 +193,7 @@ public class Character : MonoBehaviour
     private void MovetoTarget()
     {
 
+
         if (Vector3.Distance(transform.position, node._worldPos) > 0.15)
         {
             robot.GetComponent<Animation>().Play("walk");
@@ -196,14 +203,31 @@ public class Character : MonoBehaviour
             transform.Translate(Vector3.Normalize(pos) * 0.06f * move_speed);
             return;
         }
-        if (attack_num == 0)
+        List<Node> result;
+        if (is_cure)
         {
-            return;
+            if (target_cure_obj == null)
+            {
+                return;
+            }
+            if (GetDistance(node, target_cure_obj.GetComponent<Character>().GetNode()) <= gameObject.GetComponent<Cure>().GetCureDistance())
+            {
+                RobotLookAt(target_cure_obj.transform.position);
+                return;
+            }
+            result = find_path.FindingPath(transform.position, target_cure_obj.transform.position);
         }
-        if (targetobj == null)
+        else
         {
-            Debug.Log("targetobj == null");
-            return;
+            if (attack_num == 0)
+            {
+                return;
+            }
+            if (targetobj == null)
+            {
+                return;
+            }
+            result = find_path.FindingPath(transform.position, targetobj.transform.position);
         }
 
         double distance = GetDistance(node, targetobj.GetComponent<Character>().GetNode());
@@ -217,7 +241,6 @@ public class Character : MonoBehaviour
                 return;
             }
         }
-        List<Node> result = find_path.FindingPath(transform.position, targetobj.transform.position);
 
         Node next_node;
         if (result != null)
@@ -265,5 +288,25 @@ public class Character : MonoBehaviour
         {
             attack_setting[i].attack_damage *= (1 + percent);
         }
+    }
+    private void FindCureTarget()
+    {
+
+        GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        if (friends.Length > 0)
+        {
+            float min_value = 2000;
+            foreach (GameObject friend in friends)
+            {
+                float v = friend.GetComponent<Defend>().GetBloodValue();
+                if (v < min_value)
+                {
+                    min_value = v;
+                    target_cure_obj = friend;
+                }
+            }
+        }
+
+
     }
 }

@@ -188,5 +188,8 @@ public class Defend : MonoBehaviour
         return false;
     }
 
-
+    public float GetBloodValue()
+    {
+        return CurrentHP;
+    }
 }
