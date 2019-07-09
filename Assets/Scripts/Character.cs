@@ -9,9 +9,9 @@ public class Character : MonoBehaviour
 
     public enum AttackType
     {
-        Cold,
-        Hot,
-        All
+        Cold = 0,
+        Hot = 1,
+        All = 2
     };
 
     [System.Serializable]
@@ -22,12 +22,18 @@ public class Character : MonoBehaviour
         public float attack_damage;
         public float attack_time;
         public AttackType attack_type;
+        public ATK(int d, float t, float dam, AttackType type)
+        {
+            maximum_attack_distance = d;
+            attack_damage = dam;
+            attack_time = t;
+            attack_type = type;
+        }
     };
 
     //[SyncVar]
 
     public string TargetTag;
-    public bool if_skill = false;
     // private int node_index;
     private Node node;
     private GameObject targetobj;

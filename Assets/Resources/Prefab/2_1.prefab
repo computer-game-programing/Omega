@@ -324,10 +324,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4220274355820996}
-  - component: {fileID: 114304245486724886}
-  - component: {fileID: 114963337692430364}
-  - component: {fileID: 114837498776570228}
-  - component: {fileID: 114128509308058914}
+  - component: {fileID: 114361822055094442}
+  - component: {fileID: 114345353097658136}
+  - component: {fileID: 114141606252755746}
+  - component: {fileID: 114526012917566792}
   m_Layer: 0
   m_Name: 2_1
   m_TagString: Enemy
@@ -1556,7 +1556,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114128509308058914
+--- !u!114 &114141606252755746
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1564,28 +1564,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1523719517209070}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e27f9f9bb724a264e8f83bfc9ceb004a, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f065239637787b43a82cf32d9df7230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 4
-  accumulation: 5
-  skill_distance: 2
-  defend:
-    time: 0
-    percent: 0
-  attack:
-    value: 0
-    type: 0
-    blood_value: 0
-  cure:
-    value: 0
-  skill_assist:
-    value: 10
-  attack_assist:
-    value: 0.5
-  perish_together:
-    percent: 0
---- !u!114 &114304245486724886
+  blood_slider: {fileID: 114529892910178768}
+  distance: 7
+  possibility: 0
+  percent: 0.3
+  type: 1
+  skill_type: 5
+--- !u!114 &114345353097658136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -1596,15 +1584,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 442c670e3a74e1e449e2810db1c6dcc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TargetTag: Own
-  if_skill: 0
-  move_speed: 1
+  TargetTag: 
+  move_speed: 1.5
   attack_setting:
-  - maximum_attack_distance: 5
-    attack_damage: 5
-    attack_time: 2
-    attack_type: 0
-  attack_type: 0
+  - maximum_attack_distance: 4
+    attack_damage: 7
+    attack_time: 3
+    attack_type: 1
+  attack_type: 1
+--- !u!114 &114361822055094442
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523719517209070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 435260fb10f72cf4aa4788031451bfbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114474552191356098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1626,6 +1624,35 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114526012917566792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1523719517209070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27f9f9bb724a264e8f83bfc9ceb004a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 5
+  accumulation: 15
+  skill_distance: 6
+  defend:
+    time: 0
+    percent: 0
+  attack:
+    value: 0
+    type: 0
+    blood_value: 0
+  cure:
+    value: 0
+  skill_assist:
+    value: 0
+  attack_assist:
+    value: 0.2
+  perish_together:
+    percent: 0
 --- !u!114 &114529892910178768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1701,36 +1728,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114837498776570228
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523719517209070}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f065239637787b43a82cf32d9df7230, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blood_slider: {fileID: 114529892910178768}
-  distance: 2
-  possibility: 30
-  percent: 0.5
-  type: 0
-  skill_type: 0
---- !u!114 &114963337692430364
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1523719517209070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 132d5ddcf14b0bb4eaefcc276780d11f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cure_setting: []
-  time: 0
 --- !u!114 &114973568329044926
 MonoBehaviour:
   m_ObjectHideFlags: 1

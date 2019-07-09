@@ -11,6 +11,11 @@ public class Cure : MonoBehaviour
     {
         public int max_distance;
         public uint value;
+        public CureSetting(int d, uint v)
+        {
+            max_distance = d;
+            value = v;
+        }
     }
     public CureSetting[] cure_setting;
     private float time_counter; //计时器变量

@@ -1,0 +1,3569 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1977192047385136}
+  m_IsPrefabParent: 1
+--- !u!1 &1977192047385136
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 224511329431406600}
+  - component: {fileID: 114155792186112986}
+  m_Layer: 0
+  m_Name: CardInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &114155792186112986
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977192047385136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 580d72eb268d740df9d18d54a1e0a595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SimpleCards:
+  - buy: 5
+    sell: 5
+    CardIndex: 0
+    type: 0
+    name: "\u91D1\u4EC1\u8868"
+    intro: "\u53D1\u52A8\u653B\u51FB\u529B\u4E3A10\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 7
+      time: 1
+    - max_distance: 4
+      value: 3
+      time: 1.5
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 1
+    accumulatation: 20
+    attack_value: 10
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 5
+    sell: 7
+    CardIndex: 1
+    type: 0
+    name: "\u91D1\u4EC1\u8868"
+    intro: "\u53D1\u52A8\u653B\u51FB\u529B\u4E3A10\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 8
+      time: 1
+    - max_distance: 5
+      value: 4
+      time: 1.5
+    dfs_type: 0
+    dfs:
+      distance: 4
+      possibility: 0.3
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 20
+    attack_value: 10
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 5
+    sell: 9
+    CardIndex: 2
+    type: 0
+    name: "\u91D1\u4EC1\u8868"
+    intro: "\u53D1\u52A8\u653B\u51FB\u529B\u4E3A10\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 8
+      time: 1
+    - max_distance: 5
+      value: 4
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 4
+      possibility: 0.4
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 20
+    attack_value: 10
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 5
+    sell: 5
+    CardIndex: 3
+    type: 2
+    name: Juno
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A6\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534720%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 1
+    atks:
+    - max_distance: 4
+      value: 7
+      time: 3
+    - max_distance: 4
+      value: 7
+      time: 3
+    dfs_type: 1
+    dfs:
+      distance: 7
+      possibility: 0.35
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 6
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.2
+    perish_together_percent: 0
+  - buy: 5
+    sell: 7
+    CardIndex: 4
+    type: 2
+    name: Juno
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A6\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534720%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 1
+    atks:
+    - max_distance: 4
+      value: 7
+      time: 3
+    - max_distance: 4
+      value: 7
+      time: 3
+    dfs_type: 1
+    dfs:
+      distance: 7
+      possibility: 0.4
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 6
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.2
+    perish_together_percent: 0
+  - buy: 5
+    sell: 9
+    CardIndex: 5
+    type: 2
+    name: Juno
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A6\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534720%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 1
+    atks:
+    - max_distance: 4
+      value: 7
+      time: 3
+    - max_distance: 4
+      value: 7
+      time: 3
+    dfs_type: 1
+    dfs:
+      distance: 7
+      possibility: 0.4
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 6
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.2
+    perish_together_percent: 0
+  - buy: 4
+    sell: 4
+    CardIndex: 6
+    type: 0
+    name: Mars
+    intro: "\u53D1\u52A8\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u57287\u4EE5\u5185\u7684\u5168\u9762\u79EF\u653B\u51FB\u529B\u4E3A3\u7684\u653B\u51FB\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 1
+    atks:
+    - max_distance: 6
+      value: 4.5
+      time: 1
+    - max_distance: 6
+      value: 4.5
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 0
+      possibility: 0
+      percent: 0
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 7
+    accumulatation: 15
+    attack_value: 3
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 6
+    CardIndex: 7
+    type: 0
+    name: Mars
+    intro: "\u53D1\u52A8\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u57287\u4EE5\u5185\u7684\u5168\u9762\u79EF\u653B\u51FB\u529B\u4E3A3\u7684\u653B\u51FB\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 1
+    atks:
+    - max_distance: 6
+      value: 4.5
+      time: 1
+    - max_distance: 6
+      value: 4.5
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 0
+      possibility: 0
+      percent: 0
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 7
+    accumulatation: 20
+    attack_value: 3
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 8
+    CardIndex: 8
+    type: 0
+    name: Mars
+    intro: "\u53D1\u52A8\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u57287\u4EE5\u5185\u7684\u5168\u9762\u79EF\u653B\u51FB\u529B\u4E3A3\u7684\u653B\u51FB\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 1
+    atks:
+    - max_distance: 6
+      value: 4.5
+      time: 1
+    - max_distance: 6
+      value: 4.5
+      time: 1
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.1
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 7
+    accumulatation: 20
+    attack_value: 3
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 4
+    CardIndex: 9
+    type: 2
+    name: "\u65F6\u5E74"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A2\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B10\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 3
+      time: 1
+    - max_distance: 1
+      value: 3
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 2
+      possibility: 0.4
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 2
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 10
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 6
+    CardIndex: 10
+    type: 2
+    name: "\u65F6\u5E74"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B15\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 3
+      time: 1
+    - max_distance: 1
+      value: 3
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 2
+      possibility: 0.4
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 3
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 15
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 8
+    CardIndex: 11
+    type: 2
+    name: "\u65F6\u5E74"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B15\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 3
+      time: 1
+    - max_distance: 1
+      value: 3
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 2
+      possibility: 0.4
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 3
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 15
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 3
+    CardIndex: 12
+    type: 2
+    name: "\u5357\u4E1C\u5F8B"
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A4\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534715%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 2
+    - max_distance: 3
+      value: 2
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.35
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 4
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.15
+    perish_together_percent: 0
+  - buy: 3
+    sell: 5
+    CardIndex: 13
+    type: 2
+    name: "\u5357\u4E1C\u5F8B"
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A4\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534715%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 2
+    - max_distance: 3
+      value: 2
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.45
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 4
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.15
+    perish_together_percent: 0
+  - buy: 3
+    sell: 7
+    CardIndex: 14
+    type: 2
+    name: "\u5357\u4E1C\u5F8B"
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A4\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534730%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 5
+      time: 2
+    - max_distance: 3
+      value: 2
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.45
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 4
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.3
+    perish_together_percent: 0
+  - buy: 4
+    sell: 4
+    CardIndex: 15
+    type: 0
+    name: "\u65E0\u9650 "
+    intro: "\u6CA1\u6709\u6280\u80FD\u69FD\uFF0C\u5728\u8840\u91CF\u6E05\u96F6\u7684\u65F6\u5019\u4F1A\u53D1\u52A8\u8DDD\u79BB1\u4EE5\u5185\u768430%\u53EF\u80FD\u6027\u7684\u540C\u5F52\u4E8E\u5C3D\u7684\u6280\u80FD\u3002"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 5
+      time: 1
+    - max_distance: 3
+      value: 5
+      time: 1
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 6
+    distance: 1
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0.3
+  - buy: 4
+    sell: 6
+    CardIndex: 16
+    type: 0
+    name: "\u65E0\u9650 "
+    intro: "\u6CA1\u6709\u6280\u80FD\u69FD\uFF0C\u5728\u8840\u91CF\u6E05\u96F6\u7684\u65F6\u5019\u4F1A\u53D1\u52A8\u8DDD\u79BB1\u4EE5\u5185\u768440%\u53EF\u80FD\u6027\u7684\u540C\u5F52\u4E8E\u5C3D\u7684\u6280\u80FD\u3002"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 5
+      time: 1
+    - max_distance: 2
+      value: 5
+      time: 1
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 6
+    distance: 1
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0.4
+  - buy: 4
+    sell: 8
+    CardIndex: 17
+    type: 0
+    name: "\u65E0\u9650 "
+    intro: "\u6CA1\u6709\u6280\u80FD\u69FD\uFF0C\u5728\u8840\u91CF\u6E05\u96F6\u7684\u65F6\u5019\u4F1A\u53D1\u52A8\u8DDD\u79BB1\u4EE5\u5185\u768440%\u53EF\u80FD\u6027\u7684\u540C\u5F52\u4E8E\u5C3D\u7684\u6280\u80FD\u3002"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 5
+      time: 1
+    - max_distance: 3
+      value: 2
+      time: 2
+    dfs_type: 2
+    dfs:
+      distance: 6
+      possibility: 0.4
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 6
+    distance: 1
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0.4
+  - buy: 5
+    sell: 5
+    CardIndex: 18
+    type: 1
+    name: Vulcan
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A7\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B4s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1160%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 1
+    atks:
+    - max_distance: 5
+      value: 6
+      time: 8
+    - max_distance: 5
+      value: 6
+      time: 8
+    dfs_type: 2
+    dfs:
+      distance: 6
+      possibility: 0.6
+      percent: 0.5
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 7
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 7
+    defend_percent: 0.6
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 5
+    sell: 7
+    CardIndex: 19
+    type: 1
+    name: Vulcan
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A7\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B4s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1160%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 1
+    atks:
+    - max_distance: 5
+      value: 6
+      time: 8
+    - max_distance: 5
+      value: 6
+      time: 8
+    dfs_type: 2
+    dfs:
+      distance: 6
+      possibility: 0.7
+      percent: 0.75
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 7
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 7
+    defend_percent: 0.6
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 5
+    sell: 9
+    CardIndex: 20
+    type: 1
+    name: Vulcan
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A7\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B5s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1170%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 1
+    atks:
+    - max_distance: 5
+      value: 6
+      time: 8
+    - max_distance: 5
+      value: 6
+      time: 8
+    dfs_type: 2
+    dfs:
+      distance: 6
+      possibility: 0.7
+      percent: 0.75
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 7
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 7
+    defend_percent: 0.7
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 4
+    CardIndex: 21
+    type: 3
+    name: "\u9752\u9E3E"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A3\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A\u4EE5\u81EA\u5DF1\u4E3A\u5706\u5FC3\u534A\u5F84\u4E3A5\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 2
+      time: 6
+    - max_distance: 3
+      value: 1
+      time: 8
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.4
+    cures:
+    - max_distance: 2
+      value: 2
+      time: 3
+    - max_distance: 4
+      value: 1
+      time: 3
+    skill_type: 3
+    distance: 5
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 3
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 6
+    CardIndex: 22
+    type: 3
+    name: "\u9752\u9E3E"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A3\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A\u4EE5\u81EA\u5DF1\u4E3A\u5706\u5FC3\u534A\u5F84\u4E3A5\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 2
+      time: 6
+    - max_distance: 3
+      value: 1
+      time: 6
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.4
+    cures:
+    - max_distance: 2
+      value: 2
+      time: 2.5
+    - max_distance: 4
+      value: 1
+      time: 2.5
+    skill_type: 3
+    distance: 5
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 3
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 4
+    sell: 8
+    CardIndex: 23
+    type: 3
+    name: "\u9752\u9E3E"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A3\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A\u4EE5\u81EA\u5DF1\u4E3A\u5706\u5FC3\u534A\u5F84\u4E3A5\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 2
+      time: 6
+    - max_distance: 3
+      value: 1
+      time: 6
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 2
+      value: 2
+      time: 2.5
+    - max_distance: 4
+      value: 1
+      time: 2.5
+    skill_type: 3
+    distance: 5
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 3
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 3
+    CardIndex: 24
+    type: 0
+    name: "\u9EBB\u751F\u6781\u6218"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA615/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 1
+    - max_distance: 3
+      value: 2
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 15
+    attack_value: 5
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 5
+    CardIndex: 25
+    type: 0
+    name: "\u9EBB\u751F\u6781\u6218"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA615/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 1
+    - max_distance: 3
+      value: 2.5
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 15
+    attack_value: 5
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 7
+    CardIndex: 26
+    type: 0
+    name: "\u9EBB\u751F\u6781\u6218"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA615/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 4.5
+      time: 1
+    - max_distance: 3
+      value: 2.5
+      time: 1
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 15
+    attack_value: 5
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 3
+    CardIndex: 27
+    type: 0
+    name: Bacchus
+    intro: "\u5728\u81EA\u5DF1\u8840\u91CF\u4F4E\u4E8E5\u7684\u65F6\u5019\uFF0C\u5BF9\u4EE5\u81EA\u5DF1\u4E3A\u534A\u5F84\u8DDD\u79BB\u4E3A6\u7684\u9762\u79EF\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A6\u7684\u653B\u51FB\u4E00"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 4
+      time: 1.5
+    - max_distance: 4
+      value: 3.5
+      time: 1.5
+    dfs_type: 1
+    dfs:
+      distance: 1
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 7
+    distance: 6
+    accumulatation: 0
+    attack_value: 6
+    attack_type: 1
+    attack_blood_value: 5
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 5
+    CardIndex: 28
+    type: 0
+    name: Bacchus
+    intro: "\u5728\u81EA\u5DF1\u8840\u91CF\u4F4E\u4E8E5\u7684\u65F6\u5019\uFF0C\u5BF9\u4EE5\u81EA\u5DF1\u4E3A\u534A\u5F84\u8DDD\u79BB\u4E3A6\u7684\u9762\u79EF\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A6\u7684\u653B\u51FB\u4E00\u6B21"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 4
+      time: 1.5
+    - max_distance: 4
+      value: 3.5
+      time: 1.5
+    dfs_type: 1
+    dfs:
+      distance: 1
+      possibility: 0.3
+      percent: 0.35
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 7
+    distance: 6
+    accumulatation: 0
+    attack_value: 6
+    attack_type: 1
+    attack_blood_value: 5
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 7
+    CardIndex: 29
+    type: 0
+    name: Bacchus
+    intro: "\u5728\u81EA\u5DF1\u8840\u91CF\u4F4E\u4E8E5\u7684\u65F6\u5019\uFF0C\u5BF9\u4EE5\u81EA\u5DF1\u4E3A\u534A\u5F84\u8DDD\u79BB\u4E3A6\u7684\u9762\u79EF\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A6\u7684\u653B\u51FB\u4E00\u6B21"
+    atk_type: 1
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 1.5
+    - max_distance: 5
+      value: 3.5
+      time: 1.5
+    dfs_type: 1
+    dfs:
+      distance: 1
+      possibility: 0.3
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 7
+    distance: 6
+    accumulatation: 0
+    attack_value: 6
+    attack_type: 1
+    attack_blood_value: 5
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 30
+    type: 0
+    name: "\u74E6\u897F\u91CC"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A5\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 1
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 2
+    - max_distance: 4
+      value: 3
+      time: 2.5
+    dfs_type: 1
+    dfs:
+      distance: 5
+      possibility: 0.1
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 5
+    accumulatation: 10
+    attack_value: 4
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 31
+    type: 0
+    name: "\u74E6\u897F\u91CC"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A5\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 1
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 2
+    - max_distance: 4
+      value: 3
+      time: 2
+    dfs_type: 1
+    dfs:
+      distance: 5
+      possibility: 0.1
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 5
+    accumulatation: 10
+    attack_value: 4
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 32
+    type: 0
+    name: "\u74E6\u897F\u91CC"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A5\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 1
+    atks:
+    - max_distance: 2
+      value: 4
+      time: 1.5
+    - max_distance: 4
+      value: 3
+      time: 2
+    dfs_type: 1
+    dfs:
+      distance: 5
+      possibility: 0.15
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 5
+    accumulatation: 10
+    attack_value: 5
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 33
+    type: 0
+    name: "\u6734\u5141\u771F"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A6\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 5
+      time: 1.5
+    - max_distance: 2
+      value: 2
+      time: 2
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.3
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 1
+    accumulatation: 10
+    attack_value: 6
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 34
+    type: 0
+    name: "\u6734\u5141\u771F"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A6\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 5
+      time: 1.5
+    - max_distance: 2
+      value: 2
+      time: 2
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.3
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 1
+    accumulatation: 10
+    attack_value: 6
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 35
+    type: 0
+    name: "\u6734\u5141\u771F"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A6\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 5
+      time: 1
+    - max_distance: 2
+      value: 2
+      time: 1.5
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.3
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 1
+    accumulatation: 10
+    attack_value: 6
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 36
+    type: 0
+    name: "\u6C5F\u5317 "
+    intro: "\u8840\u91CF\u6E05\u96F6\u7684\u65F6\u5019\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A7\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 4.5
+      time: 2.5
+    - max_distance: 5
+      value: 3
+      time: 2.5
+    dfs_type: 0
+    dfs:
+      distance: 0
+      possibility: 0
+      percent: 0
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 7
+    distance: 2
+    accumulatation: 0
+    attack_value: 7
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 37
+    type: 0
+    name: "\u6C5F\u5317 "
+    intro: "\u8840\u91CF\u6E05\u96F6\u7684\u65F6\u5019\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A7\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 4.5
+      time: 2
+    - max_distance: 5
+      value: 3
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 0
+      possibility: 0
+      percent: 0
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 7
+    distance: 2
+    accumulatation: 0
+    attack_value: 7
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 38
+    type: 0
+    name: "\u6C5F\u5317 "
+    intro: "\u8840\u91CF\u6E05\u96F6\u7684\u65F6\u5019\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A8\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 4.5
+      time: 2
+    - max_distance: 5
+      value: 3
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 0
+      possibility: 0
+      percent: 0
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 7
+    distance: 2
+    accumulatation: 0
+    attack_value: 8
+    attack_type: 1
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 39
+    type: 0
+    name: "\u5BAB\u672C"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A4\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 2
+    atks:
+    - max_distance: 3
+      value: 3.5
+      time: 2.5
+    - max_distance: 3
+      value: 3.5
+      time: 2.5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.1
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 4
+    accumulatation: 5
+    attack_value: 4
+    attack_type: 2
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 40
+    type: 0
+    name: "\u5BAB\u672C"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A4\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 2
+    atks:
+    - max_distance: 3
+      value: 3.5
+      time: 2.5
+    - max_distance: 3
+      value: 3.5
+      time: 2.5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.15
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 4
+    accumulatation: 5
+    attack_value: 4
+    attack_type: 2
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 41
+    type: 0
+    name: "\u5BAB\u672C"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A4\uFF0C\u79EF\u7D2F\u901F\u5EA610/s"
+    atk_type: 2
+    atks:
+    - max_distance: 3
+      value: 3.5
+      time: 2.5
+    - max_distance: 3
+      value: 3.5
+      time: 2.5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.15
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 4
+    accumulatation: 10
+    attack_value: 4
+    attack_type: 2
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 42
+    type: 0
+    name: Nele
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 4.5
+      time: 2
+    - max_distance: 3
+      value: 2
+      time: 2.5
+    dfs_type: 0
+    dfs:
+      distance: 0
+      possibility: 0
+      percent: 0
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 5
+    attack_value: 2
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 43
+    type: 0
+    name: Nele
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 4.5
+      time: 2
+    - max_distance: 3
+      value: 2
+      time: 2.5
+    dfs_type: 2
+    dfs:
+      distance: 1
+      possibility: 0.1
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 5
+    attack_value: 2
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 44
+    type: 0
+    name: Nele
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u653B\u51FB\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 4.5
+      time: 1.5
+    - max_distance: 3
+      value: 2.5
+      time: 2
+    dfs_type: 2
+    dfs:
+      distance: 1
+      possibility: 0.1
+      percent: 0.1
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 1
+    distance: 2
+    accumulatation: 5
+    attack_value: 2
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 3
+    CardIndex: 45
+    type: 1
+    name: "\u4E91\u8776\u821E"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B5s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1130%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 2.5
+      time: 1
+    - max_distance: 3
+      value: 1
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 1
+      possibility: 0.5
+      percent: 0.65
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 4
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.3
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 5
+    CardIndex: 46
+    type: 1
+    name: "\u4E91\u8776\u821E"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B5s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1130%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 2.5
+      time: 1
+    - max_distance: 3
+      value: 1
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 1
+      possibility: 0.55
+      percent: 0.7
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 4
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.3
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 7
+    CardIndex: 47
+    type: 1
+    name: "\u4E91\u8776\u821E"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B6s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1160%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 2.5
+      time: 1
+    - max_distance: 3
+      value: 1
+      time: 2
+    dfs_type: 0
+    dfs:
+      distance: 1
+      possibility: 0.55
+      percent: 0.7
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 4
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 6
+    defend_percent: 0.6
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 48
+    type: 1
+    name: "\u51B7\u7130"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B2s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1125%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 2
+      time: 5
+    - max_distance: 4
+      value: 2
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.3
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 3
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 3
+    defend_percent: 0.25
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 49
+    type: 1
+    name: "\u51B7\u7130"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B2s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1125%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 2
+      time: 5
+    - max_distance: 4
+      value: 2
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.4
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 3
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 3
+    defend_percent: 0.25
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 50
+    type: 1
+    name: "\u51B7\u7130"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1130%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A20/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 2
+      time: 5
+    - max_distance: 4
+      value: 2
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.4
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 3
+    accumulatation: 20
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 3
+    defend_percent: 0.3
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 51
+    type: 1
+    name: Luka
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A5\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1115%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 3
+      time: 5
+    - max_distance: 5
+      value: 1
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.4
+      percent: 0.45
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 5
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.15
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 52
+    type: 1
+    name: Luka
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A5\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1115%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 3
+      time: 5
+    - max_distance: 5
+      value: 1
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.5
+      percent: 0.45
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 5
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.15
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 53
+    type: 1
+    name: Luka
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A5\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1125%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 3
+      time: 5
+    - max_distance: 5
+      value: 1
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.5
+      percent: 0.45
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 5
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.25
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 54
+    type: 1
+    name: Somnus
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A5\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B2s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1130%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 1
+      time: 3
+    - max_distance: 4
+      value: 1
+      time: 3
+    dfs_type: 2
+    dfs:
+      distance: 6
+      possibility: 0.15
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 5
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.3
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 55
+    type: 1
+    name: Somnus
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A5\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B2s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1130%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 1
+      time: 3
+    - max_distance: 4
+      value: 1
+      time: 3
+    dfs_type: 2
+    dfs:
+      distance: 6
+      possibility: 0.2
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 5
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.3
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 56
+    type: 1
+    name: Somnus
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A5\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1130%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A15/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 1
+      time: 3
+    - max_distance: 4
+      value: 1
+      time: 3
+    dfs_type: 2
+    dfs:
+      distance: 6
+      possibility: 0.2
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 5
+    accumulatation: 15
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 5
+    defend_percent: 0.3
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 57
+    type: 1
+    name: "\u5317\u4E43"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1125%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 2
+      time: 5
+    - max_distance: 4
+      value: 2
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.2
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 4
+    defend_percent: 0.25
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 58
+    type: 1
+    name: "\u5317\u4E43"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1125%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 2
+      time: 5
+    - max_distance: 4
+      value: 2
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.35
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 4
+    defend_percent: 0.25
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 59
+    type: 1
+    name: "\u5317\u4E43"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5DF1\u65B9\u63D0\u4F9B3s\u7684\u9632\u5FA1\uFF0C\u53EF\u4EE5\u6301\u7EED\u51CF\u5C1130%\u7684\u4F24\u5BB3\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 2
+    atks:
+    - max_distance: 4
+      value: 2
+      time: 5
+    - max_distance: 4
+      value: 2
+      time: 5
+    dfs_type: 2
+    dfs:
+      distance: 5
+      possibility: 0.35
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 2
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 4
+    defend_percent: 0.3
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 3
+    CardIndex: 60
+    type: 2
+    name: "\u5B89\u5BA4\u5948"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A1\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B15\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 2
+    atks:
+    - max_distance: 5
+      value: 2
+      time: 5
+    - max_distance: 5
+      value: 2
+      time: 5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.4
+      percent: 0.25
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 1
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 15
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 5
+    CardIndex: 61
+    type: 2
+    name: "\u5B89\u5BA4\u5948"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A1\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B15\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 2
+    atks:
+    - max_distance: 5
+      value: 2
+      time: 5
+    - max_distance: 5
+      value: 2
+      time: 5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.4
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 1
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 15
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 7
+    CardIndex: 62
+    type: 2
+    name: "\u5B89\u5BA4\u5948"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A2\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B20\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 2
+    atks:
+    - max_distance: 5
+      value: 2
+      time: 5
+    - max_distance: 5
+      value: 2
+      time: 5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.4
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 2
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 20
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 63
+    type: 2
+    name: "\u4F0A\u4E07"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B5\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 1
+    atks:
+    - max_distance: 3
+      value: 3
+      time: 4
+    - max_distance: 3
+      value: 3
+      time: 4
+    dfs_type: 1
+    dfs:
+      distance: 6
+      possibility: 0.5
+      percent: 0.15
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 3
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 5
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 64
+    type: 2
+    name: "\u4F0A\u4E07"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B5\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 1
+    atks:
+    - max_distance: 3
+      value: 3
+      time: 4
+    - max_distance: 3
+      value: 3
+      time: 4
+    dfs_type: 1
+    dfs:
+      distance: 6
+      possibility: 0.5
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 3
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 5
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 65
+    type: 2
+    name: "\u4F0A\u4E07"
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A3\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B10\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 1
+    atks:
+    - max_distance: 3
+      value: 3
+      time: 4
+    - max_distance: 3
+      value: 3
+      time: 4
+    dfs_type: 1
+    dfs:
+      distance: 6
+      possibility: 0.5
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 3
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 10
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 66
+    type: 2
+    name: Leonhard
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A2\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534710%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 3
+      time: 2
+    - max_distance: 1
+      value: 3
+      time: 2
+    dfs_type: 2
+    dfs:
+      distance: 3
+      possibility: 0.25
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 2
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.1
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 67
+    type: 2
+    name: Leonhard
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A2\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534710%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 3
+      time: 2
+    - max_distance: 1
+      value: 3
+      time: 2
+    dfs_type: 2
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 2
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.1
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 68
+    type: 2
+    name: Leonhard
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A2\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534720%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 3
+      time: 2
+    - max_distance: 1
+      value: 3
+      time: 2
+    dfs_type: 2
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.4
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 2
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.2
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 69
+    type: 2
+    name: "\u76D6\u5965\u5C14\u57FA"
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A4\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534710%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 3
+      time: 3
+    - max_distance: 4
+      value: 1
+      time: 3
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.3
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.1
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 70
+    type: 2
+    name: "\u76D6\u5965\u5C14\u57FA"
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A4\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534710%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 3
+      time: 3
+    - max_distance: 4
+      value: 1
+      time: 3
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.35
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.1
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 71
+    type: 2
+    name: "\u76D6\u5965\u5C14\u57FA"
+    intro: "\u7ED9\u4EE5\u81EA\u8EAB\u4E3A\u5706\u5FC3\u7684\u8DDD\u79BB\u4E3A4\u7684\u8303\u56F4\u5185\u7684\u5DF1\u65B9\u63D0\u534710%\u7684\u653B\u51FB\u529B\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 0
+    atks:
+    - max_distance: 2
+      value: 3
+      time: 3
+    - max_distance: 4
+      value: 1
+      time: 3
+    dfs_type: 0
+    dfs:
+      distance: 3
+      possibility: 0.35
+      percent: 0.2
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 5
+    distance: 4
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0.1
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 72
+    type: 2
+    name: Ralf
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B5\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 1
+    atks:
+    - max_distance: 6
+      value: 3
+      time: 5
+    - max_distance: 6
+      value: 3
+      time: 5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.2
+      percent: 0.3
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 5
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 73
+    type: 2
+    name: Ralf
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B5\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 1
+    atks:
+    - max_distance: 6
+      value: 3
+      time: 5
+    - max_distance: 6
+      value: 3
+      time: 5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.2
+      percent: 0.35
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 5
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 74
+    type: 2
+    name: Ralf
+    intro: "\u7ED9\u8DDD\u79BB\u4E3A4\u4EE5\u5185\u7684\u5168\u90E8\u5DF1\u65B9\u6280\u80FD\u69FD\uFF0B10\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A5/s"
+    atk_type: 1
+    atks:
+    - max_distance: 6
+      value: 3
+      time: 5
+    - max_distance: 6
+      value: 3
+      time: 5
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.2
+      percent: 0.35
+    cures:
+    - max_distance: 0
+      value: 0
+      time: 0
+    - max_distance: 0
+      value: 0
+      time: 0
+    skill_type: 4
+    distance: 4
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 0
+    cure_blood_value: 0
+    skill_assists_value: 10
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 3
+    CardIndex: 75
+    type: 3
+    name: Minerva
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 1.5
+      time: 8
+    - max_distance: 3
+      value: 0.5
+      time: 8
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.4
+      percent: 0.2
+    cures:
+    - max_distance: 1
+      value: 1.5
+      time: 8
+    - max_distance: 3
+      value: 0.5
+      time: 8
+    skill_type: 3
+    distance: 1
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 4
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 5
+    CardIndex: 76
+    type: 3
+    name: Minerva
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 1.5
+      time: 7.5
+    - max_distance: 3
+      value: 0.5
+      time: 7.5
+    dfs_type: 2
+    dfs:
+      distance: 2
+      possibility: 0.4
+      percent: 0.2
+    cures:
+    - max_distance: 1
+      value: 1.5
+      time: 7.5
+    - max_distance: 3
+      value: 0.5
+      time: 7.5
+    skill_type: 3
+    distance: 1
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 4
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 3
+    sell: 7
+    CardIndex: 77
+    type: 3
+    name: Minerva
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A4.5\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA6\u4E3A10/s"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 1.5
+      time: 7.5
+    - max_distance: 3
+      value: 0.5
+      time: 7.5
+    dfs_type: 2
+    dfs:
+      distance: 1
+      possibility: 0.3
+      percent: 0.2
+    cures:
+    - max_distance: 1
+      value: 1.5
+      time: 7.5
+    - max_distance: 3
+      value: 0.5
+      time: 7.5
+    skill_type: 3
+    distance: 1
+    accumulatation: 10
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 4.5
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 78
+    type: 3
+    name: "\u747E\u708E"
+    intro: "\u5728\u8840\u91CF\u6E05\u96F6\u65F6\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A2"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 1
+      time: 10
+    - max_distance: 3
+      value: 0.5
+      time: 12
+    dfs_type: 2
+    dfs:
+      distance: 1
+      possibility: 0.5
+      percent: 0.6
+    cures:
+    - max_distance: 1
+      value: 1
+      time: 4
+    - max_distance: 3
+      value: 0.5
+      time: 4
+    skill_type: 8
+    distance: 2
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 4
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 79
+    type: 3
+    name: "\u747E\u708E"
+    intro: "\u5728\u8840\u91CF\u6E05\u96F6\u65F6\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A2"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 1
+      time: 10
+    - max_distance: 3
+      value: 1
+      time: 12
+    dfs_type: 2
+    dfs:
+      distance: 1
+      possibility: 0.5
+      percent: 0.55
+    cures:
+    - max_distance: 1
+      value: 1
+      time: 4
+    - max_distance: 3
+      value: 0.5
+      time: 4
+    skill_type: 8
+    distance: 2
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 4
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 80
+    type: 3
+    name: "\u747E\u708E"
+    intro: "\u5728\u8840\u91CF\u6E05\u96F6\u65F6\u53D1\u52A8\u529B\u5EA6\u4E3A5\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A2"
+    atk_type: 2
+    atks:
+    - max_distance: 1
+      value: 1
+      time: 10
+    - max_distance: 3
+      value: 1
+      time: 12
+    dfs_type: 2
+    dfs:
+      distance: 1
+      possibility: 0.5
+      percent: 0.5
+    cures:
+    - max_distance: 1
+      value: 1
+      time: 4
+    - max_distance: 3
+      value: 0.5
+      time: 4
+    skill_type: 8
+    distance: 2
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 5
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 81
+    type: 3
+    name: "\u591A\u90E8\u672A"
+    intro: "\u5728\u81EA\u5DF1\u8840\u91CF\u4F4E\u4E8E5\u7684\u65F6\u5019\uFF0C\u5BF9\u4EE5\u81EA\u5DF1\u4E3A\u534A\u5F84\u8DDD\u79BB\u4E3A7\u7684\u9762\u79EF\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A3\u7684\u6CBB\u7597\u4E00\u6B21"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 1.5
+      time: 10
+    - max_distance: 2
+      value: 1
+      time: 10
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.5
+      percent: 0.5
+    cures:
+    - max_distance: 3
+      value: 0.5
+      time: 3
+    - max_distance: 3
+      value: 0.5
+      time: 3
+    skill_type: 8
+    distance: 7
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 3
+    cure_blood_value: 5
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 82
+    type: 3
+    name: "\u591A\u90E8\u672A"
+    intro: "\u5728\u81EA\u5DF1\u8840\u91CF\u4F4E\u4E8E5\u7684\u65F6\u5019\uFF0C\u5BF9\u4EE5\u81EA\u5DF1\u4E3A\u534A\u5F84\u8DDD\u79BB\u4E3A7\u7684\u9762\u79EF\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A3\u7684\u6CBB\u7597\u4E00\u6B21"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 1.5
+      time: 10
+    - max_distance: 2
+      value: 1.5
+      time: 10
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.5
+      percent: 0.5
+    cures:
+    - max_distance: 3
+      value: 0.5
+      time: 2.5
+    - max_distance: 3
+      value: 0.5
+      time: 2.5
+    skill_type: 8
+    distance: 7
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 3
+    cure_blood_value: 5
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 83
+    type: 3
+    name: "\u591A\u90E8\u672A"
+    intro: "\u5728\u81EA\u5DF1\u8840\u91CF\u4F4E\u4E8E5\u7684\u65F6\u5019\uFF0C\u5BF9\u4EE5\u81EA\u5DF1\u4E3A\u534A\u5F84\u8DDD\u79BB\u4E3A7\u7684\u9762\u79EF\uFF0C\u53D1\u52A8\u529B\u5EA6\u4E3A4\u7684\u6CBB\u7597\u4E00\u6B21"
+    atk_type: 1
+    atks:
+    - max_distance: 1
+      value: 1.5
+      time: 9
+    - max_distance: 2
+      value: 1.5
+      time: 9
+    dfs_type: 1
+    dfs:
+      distance: 3
+      possibility: 0.4
+      percent: 0.5
+    cures:
+    - max_distance: 3
+      value: 0.5
+      time: 2
+    - max_distance: 3
+      value: 0.5
+      time: 2
+    skill_type: 8
+    distance: 7
+    accumulatation: 0
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 4
+    cure_blood_value: 5
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 2
+    CardIndex: 84
+    type: 3
+    name: Duden
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A2\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 1.5
+      time: 12
+    - max_distance: 2
+      value: 1.5
+      time: 12
+    dfs_type: 2
+    dfs:
+      distance: 4
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 2
+      value: 0.5
+      time: 2.5
+    - max_distance: 2
+      value: 0.5
+      time: 2.5
+    skill_type: 3
+    distance: 2
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 2
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 4
+    CardIndex: 85
+    type: 3
+    name: Duden
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A2\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 1.5
+      time: 11
+    - max_distance: 2
+      value: 1.5
+      time: 11
+    dfs_type: 2
+    dfs:
+      distance: 4
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 2
+      value: 0.5
+      time: 2.5
+    - max_distance: 2
+      value: 0.5
+      time: 2.5
+    skill_type: 3
+    distance: 2
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 2
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 2
+    sell: 6
+    CardIndex: 86
+    type: 3
+    name: Duden
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A2\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A2\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 2
+    atks:
+    - max_distance: 2
+      value: 1.5
+      time: 10
+    - max_distance: 2
+      value: 1.5
+      time: 10
+    dfs_type: 2
+    dfs:
+      distance: 4
+      possibility: 0.3
+      percent: 0.3
+    cures:
+    - max_distance: 4
+      value: 0.5
+      time: 2.5
+    - max_distance: 4
+      value: 0.5
+      time: 2.5
+    skill_type: 3
+    distance: 2
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 2
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 1
+    CardIndex: 87
+    type: 3
+    name: "\u9038\u5C18"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A1\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA62.5/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 1
+      time: 15
+    - max_distance: 2
+      value: 0.5
+      time: 15
+    dfs_type: 0
+    dfs:
+      distance: 4
+      possibility: 0.3
+      percent: 0.5
+    cures:
+    - max_distance: 1
+      value: 0.5
+      time: 4
+    - max_distance: 1
+      value: 0.5
+      time: 4
+    skill_type: 3
+    distance: 1
+    accumulatation: 2.5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 1
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 3
+    CardIndex: 88
+    type: 3
+    name: "\u9038\u5C18"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A1\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA62.5/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 1
+      time: 15
+    - max_distance: 2
+      value: 0.5
+      time: 15
+    dfs_type: 0
+    dfs:
+      distance: 4
+      possibility: 0.3
+      percent: 0.5
+    cures:
+    - max_distance: 1
+      value: 0.5
+      time: 3.5
+    - max_distance: 1
+      value: 0.5
+      time: 3.5
+    skill_type: 3
+    distance: 1
+    accumulatation: 2.5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 1
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+  - buy: 1
+    sell: 5
+    CardIndex: 89
+    type: 3
+    name: "\u9038\u5C18"
+    intro: "\u53D1\u52A8\u529B\u5EA6\u4E3A1\u7684\u6CBB\u7597\uFF0C\u8DDD\u79BB\u4E3A1\uFF0C\u79EF\u7D2F\u901F\u5EA65/s"
+    atk_type: 0
+    atks:
+    - max_distance: 1
+      value: 1
+      time: 15
+    - max_distance: 2
+      value: 0.5
+      time: 15
+    dfs_type: 0
+    dfs:
+      distance: 4
+      possibility: 0.3
+      percent: 0.5
+    cures:
+    - max_distance: 1
+      value: 0.5
+      time: 3.5
+    - max_distance: 1
+      value: 0.5
+      time: 3.5
+    skill_type: 3
+    distance: 1
+    accumulatation: 5
+    attack_value: 0
+    attack_type: 0
+    attack_blood_value: 0
+    defend_time: 0
+    defend_percent: 0
+    cure_value: 1
+    cure_blood_value: 0
+    skill_assists_value: 0
+    attack_assist_value: 0
+    perish_together_percent: 0
+--- !u!224 &224511329431406600
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1977192047385136}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -503.43652, y: -4.163925, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -503.43652, y: -4.163925}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}

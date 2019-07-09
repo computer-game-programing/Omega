@@ -9011,12 +9011,12 @@ Prefab:
     - target: {fileID: 224697090278148772, guid: a2331419ff49355478e243075865bdbc,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 224697090278148772, guid: a2331419ff49355478e243075865bdbc,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 1827475754976524, guid: a2331419ff49355478e243075865bdbc, type: 2}
       propertyPath: m_Name
@@ -14980,27 +14980,29 @@ Prefab:
     - target: {fileID: 224334133138185502, guid: 59fc638a010364ec98b9d45023355ed2,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 224334133138185502, guid: 59fc638a010364ec98b9d45023355ed2,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
-    - target: {fileID: 114247710916010836, guid: 59fc638a010364ec98b9d45023355ed2,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: type
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 114247710916010836, guid: 59fc638a010364ec98b9d45023355ed2,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: accumulation
       value: 30
       objectReference: {fileID: 0}
-    - target: {fileID: 114247710916010836, guid: 59fc638a010364ec98b9d45023355ed2,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: skill_distance
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114146054650787808, guid: 59fc638a010364ec98b9d45023355ed2,
+        type: 2}
+      propertyPath: TargetTag
+      value: Own
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59fc638a010364ec98b9d45023355ed2, type: 2}
@@ -46274,12 +46276,12 @@ Prefab:
     - target: {fileID: 224773530946940660, guid: b4c0d43e134b94c70b5989a78d44cec3,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -70
       objectReference: {fileID: 0}
     - target: {fileID: 224773530946940660, guid: b4c0d43e134b94c70b5989a78d44cec3,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 114800365762455600, guid: b4c0d43e134b94c70b5989a78d44cec3,
         type: 2}
@@ -46460,20 +46462,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114128509308058914, guid: 7538343920e574561bc4efba56a8b42b,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: accumulation
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 114128509308058914, guid: 7538343920e574561bc4efba56a8b42b,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: skill_distance
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 114128509308058914, guid: 7538343920e574561bc4efba56a8b42b,
-        type: 2}
+    - target: {fileID: 0}
       propertyPath: type
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114345353097658136, guid: 7538343920e574561bc4efba56a8b42b,
+        type: 2}
+      propertyPath: TargetTag
+      value: Own
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7538343920e574561bc4efba56a8b42b, type: 2}
