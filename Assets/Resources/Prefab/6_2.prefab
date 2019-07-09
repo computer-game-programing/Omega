@@ -36,6 +36,7 @@ GameObject:
   - component: {fileID: 4540024532622834}
   - component: {fileID: 114369121918519076}
   - component: {fileID: 114563501684686776}
+  - component: {fileID: 114645879405527364}
   - component: {fileID: 114131791090477644}
   m_Layer: 0
   m_Name: 6_2
@@ -751,7 +752,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1021355081559788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.19, y: 0.89, z: 13.99}
+  m_LocalPosition: {x: 45.53, y: 0.89, z: 20.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4348196291887556}
@@ -1533,12 +1534,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetTag: Enemy
+  if_skill: 0
   move_speed: 1
   attack_setting:
   - maximum_attack_distance: 2
     attack_damage: 5
     attack_time: 1
     attack_type: 1
+  attack_type: 0
 --- !u!114 &114480112488675198
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1550,7 +1553,7 @@ MonoBehaviour:
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 7bde390342deded40b19c6bf59974020, type: 3}
   m_Color: {r: 0.40392157, g: 0.40392157, b: 0.4117647, a: 0.007843138}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
@@ -1582,6 +1585,7 @@ MonoBehaviour:
   possibility: 30
   percent: 0.5
   type: 2
+  skill_type: 0
 --- !u!114 &114590377926206842
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1630,6 +1634,35 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114645879405527364
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1021355081559788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e27f9f9bb724a264e8f83bfc9ceb004a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  accumulation: 5
+  skill_distance: 2
+  defend:
+    time: 0
+    percent: 0
+  attack:
+    value: 5
+    type: 0
+    blood_value: 0
+  cure:
+    value: 0
+  skill_assist:
+    value: 0
+  attack_assist:
+    value: 0
+  perish_together:
+    percent: 0
 --- !u!114 &114911277156997102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1702,7 +1735,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1530720201973214}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -70, y: -5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224819972118004184}
@@ -1720,7 +1753,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1695771591420796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -4.5999985, y: 0, z: 0}
   m_LocalScale: {x: 0.9317315, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224523106142112732}
@@ -1738,7 +1771,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1513699866141982}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 24, y: 51.6, z: 0}
   m_LocalScale: {x: 2.7239552, y: 1, z: 1}
   m_Children:
   - {fileID: 224268835719091990}
@@ -1759,7 +1792,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1832348315698016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -70, y: -10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224860876898596114}
@@ -1777,7 +1810,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1294177426552422}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2.6167145, z: 0}
   m_LocalScale: {x: 0.00587, y: 0.02962, z: 0.080189995}
   m_Children:
   - {fileID: 224523106142112732}
@@ -1796,7 +1829,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1869308372106610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224028719011840042}

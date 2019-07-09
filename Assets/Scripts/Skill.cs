@@ -127,13 +127,17 @@ public class Skill : MonoBehaviour
     }
     private void DefendSkill()
     {
-        GameObject[] enemys = GameObject.FindGameObjectsWithTag(gameObject.tag);
-        foreach (GameObject enemy in enemys)
+        GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        if (friends.Length > 0)
         {
-            double distance = Character.GetDistance(character.GetNode(), enemy.GetComponent<Character>().GetNode());
+            Instantiate(Resources.Load("SelectedEffect/Cure"), this.gameObject.transform.position, Quaternion.identity);
+        }
+        foreach (GameObject friend in friends)
+        {
+            double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
             if (distance <= skill_distance + 0.0001)
             {
-                enemy.GetComponent<Defend>().ExtraDefend(defend.percent, defend.time);
+                friend.GetComponent<Defend>().ExtraDefend(defend.percent, defend.time);
 
             }
         }
@@ -162,6 +166,10 @@ public class Skill : MonoBehaviour
     {
         Debug.Log("AttackSkill");
         GameObject[] enemys = GameObject.FindGameObjectsWithTag(character.TargetTag);
+        if (enemys.Length > 0)
+        {
+            Instantiate(Resources.Load("SelectedEffect/AttackSkill"), this.gameObject.transform.position, Quaternion.identity);
+        }
         foreach (GameObject enemy in enemys)
         {
             double distance = Character.GetDistance(character.GetNode(), enemy.GetComponent<Character>().GetNode());
@@ -176,6 +184,11 @@ public class Skill : MonoBehaviour
     {
         Debug.Log("CureSkill");
         GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        if (friends.Length > 0)
+        {
+            Instantiate(Resources.Load("SelectedEffect/Cure"), this.gameObject.transform.position, Quaternion.identity);
+        }
+
         foreach (GameObject friend in friends)
         {
             double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
@@ -189,7 +202,12 @@ public class Skill : MonoBehaviour
     private void SkillAssist()
     {
         GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        if (friends.Length > 0)
+        {
+            Instantiate(Resources.Load("SelectedEffect/SkillAssist"), this.gameObject.transform.position, Quaternion.identity);
+        }
         foreach (GameObject friend in friends)
+
         {
             double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
             if (distance <= skill_distance + 0.0001)
@@ -202,11 +220,18 @@ public class Skill : MonoBehaviour
     private void AttackAssist()
     {
         GameObject[] friends = GameObject.FindGameObjectsWithTag(gameObject.tag);
+        Debug.Log("AttackAssist");
+        if (friends.Length > 0)
+        {
+            Instantiate(Resources.Load("SelectedEffect/AttackAssist"), this.gameObject.transform.position, Quaternion.identity);
+        }
+
         foreach (GameObject friend in friends)
         {
             double distance = Character.GetDistance(character.GetNode(), friend.GetComponent<Character>().GetNode());
             if (distance <= skill_distance + 0.0001)
             {
+                Debug.Log("PerishTogetherSkill");
                 friend.GetComponent<Character>().ImprovAttackValue(attack_assist.value);
             }
         }
@@ -216,6 +241,10 @@ public class Skill : MonoBehaviour
     {
         Debug.Log("PerishTogetherSkill");
         GameObject[] enemys = GameObject.FindGameObjectsWithTag(character.TargetTag);
+        if (enemys.Length > 0)
+        {
+            Instantiate(Resources.Load("SelectedEffect/PerishTogether"), this.gameObject.transform.position, Quaternion.identity);
+        }
         foreach (GameObject enemy in enemys)
         {
             double distance = Character.GetDistance(character.GetNode(), enemy.GetComponent<Character>().GetNode());
@@ -225,6 +254,7 @@ public class Skill : MonoBehaviour
                 if (rand <= perish_together.percent)
                 {
                     enemy.GetComponent<Defend>().KillObject();
+
                 }
 
             }

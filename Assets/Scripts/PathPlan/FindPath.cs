@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class FindPath : MonoBehaviour
 {
-    public Transform player, EndPoint;
+    // public Transform player, EndPoint;
     Grid grid;
     // Use this for initialization
     void Start()
